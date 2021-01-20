@@ -1,8 +1,14 @@
 import React from "react";
 import { Radar } from "react-chartjs-2";
 import { StyledProfileScreen } from "../styles/pagestyles";
+import { useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 const ProfileScreen = () => {
+  const { push } = useHistory();
+  useEffect(() => {
+    push("/");
+  }, []);
   return (
     <StyledProfileScreen>
       <section className="header-section">

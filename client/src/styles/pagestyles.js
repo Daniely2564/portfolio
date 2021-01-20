@@ -5,7 +5,7 @@ export const StyledProfileScreen = styled.div`
   background-color: #dadada;
   min-height: 100vh;
   height: 100%;
-  padding-bottom: 300px;
+  padding-bottom: 10px;
   padding-top: 100px;
 
   .header-section {
@@ -84,7 +84,7 @@ export const StyledEducationPage = styled.div`
   background-color: #dadada;
   min-height: 100vh;
   height: 100%;
-  padding-bottom: 300px;
+  padding-bottom: 10px;
   padding-top: 100px;
   .header-section {
     width: 80%;
@@ -190,7 +190,7 @@ export const StyledExperiencePage = styled.div`
   background-color: #dadada;
   min-height: 100vh;
   height: 100%;
-  padding-bottom: 300px;
+  padding-bottom: 10px;
   padding-top: 100px;
   .header-section {
     width: 80%;
@@ -247,19 +247,25 @@ export const StyledExperiencePage = styled.div`
     margin-bottom: 300px;
   }
   .section-image {
-    width: 100%;
+    min-height: 80%;
     max-height: 80%;
+    min-width: 100%;
+    max-width: 100%;
   }
   .body {
     position: absolute;
-    top: 5%;
+    top: 10%;
     width: 100%;
+    height: 100%;
   }
   .image-wrapper {
     max-height: 80%;
   }
   .explanation {
     padding: 0px 60px 0px 20px;
+  }
+  .explanation-left {
+    padding: 0px 20px 0px 60px;
   }
   .number {
     font-size: 2rem;
@@ -275,9 +281,8 @@ export const StyledProjectScreen = styled.div`
   background-color: #dadada;
   min-height: 100vh;
   height: 100%;
-  padding-bottom: 300px;
+  padding-bottom: 10px;
   padding-top: 100px;
-
   .header-section {
     width: 80%;
     height: 80vh;
@@ -314,6 +319,20 @@ export const StyledProjectScreen = styled.div`
     line-height: 2rem;
     font-size: 1.5rem;
   }
+  .logo {
+    width: 25%;
+    max-width: 300px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+  #structure {
+    width: 50%;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .body-section {
     width: 80%;
     height: 80vh;
@@ -325,13 +344,16 @@ export const StyledProjectScreen = styled.div`
     margin-bottom: 300px;
   }
   .section-image {
-    width: 100%;
+    min-height: 80%;
     max-height: 80%;
+    min-width: 100%;
+    max-width: 100%;
   }
   .body {
     position: absolute;
-    top: 5%;
+    top: 10%;
     width: 100%;
+    height: 100%;
   }
   .image-wrapper {
     max-height: 80%;
@@ -339,12 +361,53 @@ export const StyledProjectScreen = styled.div`
   .explanation {
     padding: 0px 60px 0px 20px;
   }
+  .explanation-left {
+    padding: 0px 20px 0px 60px;
+  }
   .number {
     font-size: 2rem;
-    color: #33854b;
+    color: #186aaf;
     font-weight: bold;
   }
   .explanation-detail {
     letter-spacing: 0.04rem;
+  }
+`;
+
+export const StyledCertificationScreen = styled.div`
+  background-color: #dadada;
+  min-height: 100vh;
+  height: 100%;
+  padding-bottom: 10px;
+  padding-top: 100px;
+
+  .header-section {
+    width: 80%;
+    height: 80vh;
+    background-color: #f3f3f3;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 3px 18px rgba(0, 0, 0, 0.5);
+    position: relative;
+    margin-bottom: 300px;
+  }
+  .title {
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .credential {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 80%;
+  }
+  a {
+    color: #0070b0;
+    font-size: 1.1rem;
+    text-decoration: none;
   }
 `;
