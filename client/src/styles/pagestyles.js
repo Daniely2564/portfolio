@@ -52,6 +52,7 @@ export const StyledProfileScreen = styled.div`
     margin-right: auto;
     box-shadow: 3px 3px 18px rgba(0, 0, 0, 0.5);
     position: relative;
+    font-size: .8rem;
   }
   .skills-title {
     position: absolute;
