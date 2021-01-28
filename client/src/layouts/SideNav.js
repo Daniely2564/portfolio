@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { StyledSideNav } from "../styles/layoutstyles";
+import profile from "../img/my-profile.jpg";
 
 const SideNav = (props) => {
   const location = useLocation();
@@ -8,10 +9,7 @@ const SideNav = (props) => {
   return (
     <StyledSideNav activeItem={activeItem}>
       <div className="profile-picture">
-        <img
-          src="https://i.picsum.photos/id/659/536/354.jpg?hmac=rDYerKb1XZkOQo_yPZDDV6mc1c8pj5CGU9cdsQwldgs"
-          alt="profile"
-        />
+        <img src={profile} alt="profile" />
       </div>
       <ul className="nav-list">
         <Link to="/">
