@@ -209,15 +209,15 @@ export default function Hero() {
                   size="md"
                   className={classes.control}
                   component={"a"}
-                  href="https://github.com/na0495/Personal-Portfolio-template"
+                  href="https://github.com/Daniely2564"
                   target={"_blank"}
                   onClick={() =>
                     gaEventTracker({
-                      label: "Preview on Github",
+                      label: "View My Github Profile",
                     })
                   }
                 >
-                  Preview on Github &nbsp;
+                  View My Github Profile &nbsp;
                   <ThemeIcon color="yellow" radius="xl" size="lg">
                     <Star />
                   </ThemeIcon>

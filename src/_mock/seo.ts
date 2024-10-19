@@ -1,7 +1,7 @@
 export const metaData = {
-  title: "Saad Mrabet - Portfolio",
-  titleTemplate: "Saad Mrabet - Portfolio",
-  siteName: "Saad Mrabet - Portfolio",
+  title: "Daniel Yoo - Portfolio",
+  titleTemplate: "Daniel Yoo - Portfolio",
+  siteName: "Daniel Yoo - Portfolio",
   titleSeparator: " - ",
   description:
     "Hi there, I'm Saad Mrabet, a full-stack developer from Morocco. I'm passionate about building web applications and I love to learn new things, this is an open source Portfolio template that i builded with React, Vite, Mantine",
@@ -9,8 +9,8 @@ export const metaData = {
   siteUrl: "https://saad-mrabet.me/",
   siteLanguage: "en",
   siteLocale: "en_US",
-  twitterUsername: "@na0495",
-  githubUsername: "na0495",
-  author: "Saad Mrabet aka na0495",
-  fullName: "Saâd Mrabet",
+  twitterUsername: "@none____",
+  githubUsername: "Daniely2564",
+  author: "Daniel Yoo aka Daniely2564",
+  fullName: "Daniel Yoo",
 };

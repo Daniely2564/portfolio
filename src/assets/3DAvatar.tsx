@@ -12,7 +12,7 @@ export function Avatar(props: any) {
   const { actions } = useAnimations(animations, group);
 
   useEffect(() => {
-    actions["Armature|mixamo.com|Layer0"].play();
+    actions["Armature|mixamo.com|Layer0"]!.play();
   });
 
   return (
