@@ -49,7 +49,7 @@ export default function MusicMode() {
           variant="filled"
           radius="lg"
           aria-label={playMode ? "Music Off" : "Music On"}
-          sx={(theme) => ({
+          sx={(theme: any) => ({
             backgroundColor:
               theme.colorScheme === "dark"
                 ? theme.colors.gray[8]

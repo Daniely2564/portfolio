@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ActionIcon, createStyles } from "@mantine/core";
 import { useScrollIntoView } from "@mantine/hooks";
 // components
-import About from "src/components/About";
+import About from "src/components/Experience";
 import Github from "src/components/Github";
 import Hero from "src/components/Hero";
 import Section from "src/components/Section";

@@ -5,6 +5,7 @@ import { useMediaQuery } from "@mantine/hooks";
 import {
   Container,
   Group,
+  List,
   Switch,
   Text,
   Title,
@@ -22,40 +23,63 @@ import { Code, CodeOff } from "tabler-icons-react";
 
 // ----------------------------------------------------------------------------
 
-const aboutMeCode = `import Saad from "@saad/core"
+const aboutMeCode = `import Daniel from "@daniel/experiences"
 
 // -----------------------------------------------------------------------------
 
-type Props = {
-  name: string;
-  age: number;
-  location: string;
-  email: string;
+type Experience = {
+  title: string;
+  since: string;
+  company: string;
+  bullets: string[];
 }
 
-export default function AboutMe(props: Props) {
+export default function AboutMe({ experiences }: { experiences: Experience[]}) {
   return (
-    <Saad ${aboutMe.details.map(
-      (item: any) =>
-        `
-      ${item.icon} = {${item.text}}`
-    )}
+    <Daniel 
+      experiences={${JSON.stringify(aboutMe.experiences, null, 2).replace(
+        /\n/g,
+        "\n\t"
+      )}}
     />
   );
 }`;
 
-export default function About() {
+export default function Experience() {
   const theme = useMantineTheme();
   const match = useMediaQuery("(max-width: 1000px)");
-  const [isTechPersonal, setIsTechPersonal] = useState(true);
+  const [isTechPersonal, setIsTechPersonal] = useState(false);
   const NonTechContent = () => (
     <>
-      {aboutMe.details.map((item: any, index: number) => (
+      {aboutMe.experiences.map((experience, index) => (
         <div key={index}>
-          <Text size="lg" key={item.id} className="text" mt={5}>
-            <span style={{ marginRight: 5 }}>{item.icon}</span>
-            {item.text}
-          </Text>
+          <Group position="apart" mb={11} mt={13}>
+            <Title
+              order={4}
+              sx={(theme) => ({
+                color:
+                  theme.colorScheme === "dark"
+                    ? theme.colors.yellow[2]
+                    : theme.colors.orange[3],
+              })}
+              mb={6}
+            >
+              {experience.title}, {experience.company}
+            </Title>
+            <Text
+              size="md"
+              fw={900}
+              variant="gradient"
+              gradient={{ from: "blue", to: "cyan", deg: 90 }}
+            >
+              {experience.since}
+            </Text>
+          </Group>
+          <List>
+            {experience.bullets.map((bullet, i) => (
+              <List.Item key={i}>{bullet}</List.Item>
+            ))}
+          </List>
         </div>
       ))}
     </>
@@ -64,7 +88,7 @@ export default function About() {
   return (
     <Container px="xl" size="lg">
       <BoxWrapper withBackground={false}>
-        <Group position="apart" mb={25}>
+        <Group position="apart" mb={30}>
           <Title
             order={1}
             sx={(theme) => ({

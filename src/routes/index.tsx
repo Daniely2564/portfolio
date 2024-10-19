@@ -30,7 +30,7 @@ export default function Routes() {
     {
       path: "/about",
       element: <MainLayout />,
-      children: [{ path: "", element: <AboutPage /> }],
+      children: [{ path: "", element: <ExperiencePage /> }],
     },
     {
       path: "/skills",
@@ -79,7 +79,7 @@ const Maintenance = Loadable(lazy(() => import("src/pages/Maintenance")));
 const Page500 = Loadable(lazy(() => import("src/pages/Page500")));
 const NotFound = Loadable(lazy(() => import("src/pages/Page404")));
 const LandingPage = Loadable(lazy(() => import("src/pages/LandingPage")));
-const AboutPage = Loadable(lazy(() => import("src/pages/AboutPage")));
+const ExperiencePage = Loadable(lazy(() => import("src/pages/ExperiencePage")));
 const SkillsPage = Loadable(lazy(() => import("src/pages/SkillsPage")));
 const ProjectsPage = Loadable(lazy(() => import("src/pages/ProjectsPage")));
 const ContactPage = Loadable(lazy(() => import("src/pages/ContactPage")));
