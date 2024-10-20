@@ -16,7 +16,7 @@ import vsDark from "prism-react-renderer/themes/vsDark";
 // Components
 import BoxWrapper from "./BoxWrapper";
 // _mock
-import { aboutMe } from "src/_mock/aboutme";
+import { about } from "src/_mock/aboutme";
 // icons
 import { Code, CodeOff } from "tabler-icons-react";
 
@@ -35,7 +35,7 @@ type Props = {
 
 export default function AboutMe(props: Props) {
   return (
-    <Saad ${aboutMe.details.map(
+    <Saad ${about.details.map(
       (item: any) =>
         `
       ${item.icon} = {${item.text}}`
@@ -50,7 +50,7 @@ export default function About() {
   const [isTechPersonal, setIsTechPersonal] = useState(true);
   const NonTechContent = () => (
     <>
-      {aboutMe.details.map((item: any, index: number) => (
+      {about.details.map((item: any, index: number) => (
         <div key={index}>
           <Text size="lg" key={item.id} className="text" mt={5}>
             <span style={{ marginRight: 5 }}>{item.icon}</span>
@@ -74,7 +74,7 @@ export default function About() {
                   : theme.colors.orange[5],
             })}
           >
-            {aboutMe.title}
+            {about.title}
           </Title>
           {!match && (
             <Switch

@@ -17,7 +17,7 @@ import vsDark from "prism-react-renderer/themes/vsDark";
 // Components
 import BoxWrapper from "./BoxWrapper";
 // _mock
-import { aboutMe } from "src/_mock/aboutme";
+import { experience } from "src/_mock/aboutme";
 // icons
 import { Code, CodeOff } from "tabler-icons-react";
 
@@ -37,7 +37,7 @@ type Experience = {
 export default function AboutMe({ experiences }: { experiences: Experience[]}) {
   return (
     <Daniel 
-      experiences={${JSON.stringify(aboutMe.experiences, null, 2).replace(
+      experiences={${JSON.stringify(experience.experiences, null, 2).replace(
         /\n/g,
         "\n\t"
       )}}
@@ -51,7 +51,7 @@ export default function Experience() {
   const [isTechPersonal, setIsTechPersonal] = useState(false);
   const NonTechContent = () => (
     <>
-      {aboutMe.experiences.map((experience, index) => (
+      {experience.experiences.map((exp, index) => (
         <div key={index}>
           <Group position="apart" mb={11} mt={13}>
             <Title
@@ -64,7 +64,7 @@ export default function Experience() {
               })}
               mb={6}
             >
-              {experience.title}, {experience.company}
+              {exp.title}, {exp.company}
             </Title>
             <Text
               size="md"
@@ -72,11 +72,11 @@ export default function Experience() {
               variant="gradient"
               gradient={{ from: "blue", to: "cyan", deg: 90 }}
             >
-              {experience.since}
+              {exp.since}
             </Text>
           </Group>
           <List>
-            {experience.bullets.map((bullet, i) => (
+            {exp.bullets.map((bullet, i) => (
               <List.Item key={i}>{bullet}</List.Item>
             ))}
           </List>
@@ -98,7 +98,7 @@ export default function Experience() {
                   : theme.colors.orange[5],
             })}
           >
-            {aboutMe.title}
+            {experience.title}
           </Title>
           {!match && (
             <Switch

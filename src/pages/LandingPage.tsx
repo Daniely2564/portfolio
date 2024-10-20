@@ -5,7 +5,7 @@ import { useScrollIntoView } from "@mantine/hooks";
 // components
 import Experience from "src/components/Experience";
 import About from "src/components/About";
-import Github from "src/components/Github";
+import Education from "src/components/Education";
 import Hero from "src/components/Hero";
 import Section from "src/components/Section";
 import Skills from "src/components/Skills";
@@ -48,21 +48,13 @@ export default function LandingPage() {
   return (
     <>
       <div ref={targetRef} />
-      <Section withBackground={false} isFirst={true}>
-        <Hero />
-      </Section>
-      <Section withBackground={true}>
-        <Experience />
-      </Section>
-      <Section withBackground={false}>
-        <Skills />
-      </Section>
-      <Section withBackground={true} height={"200hv"}>
-        <Github />
-      </Section>
-      <Section withBackground={false} height={"200hv"}>
-        <Project />
-      </Section>
+      {[Hero, About, Experience, Skills, Education, Project].map(
+        (Component, idx) => (
+          <Section key={idx} isFirst={idx === 0} withBackground={idx % 2 === 1}>
+            <Component />
+          </Section>
+        )
+      )}
       <div className={classes.sticky}>
         <ActionIcon
           variant="filled"

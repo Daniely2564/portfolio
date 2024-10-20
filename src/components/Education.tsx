@@ -11,9 +11,6 @@ import {
 import BoxWrapper from "./BoxWrapper";
 import { education } from "../_mock/aboutme";
 
-// images
-import RutgersImg from "../assets/education/rutgers.jpeg";
-
 // ----------------------------------------------------------------------------
 
 const useStyles = createStyles((theme) => ({
@@ -29,7 +26,7 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export default function Github() {
+export default function Education() {
   return (
     <Container px="xl" size="lg" style={{ width: "100%" }}>
       <BoxWrapper withBackground={false}>

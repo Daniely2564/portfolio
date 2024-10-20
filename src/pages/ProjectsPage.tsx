@@ -1,5 +1,5 @@
 // components
-import Github from "src/components/Github";
+import Github from "src/components/Education";
 import CustomHelmet from "src/components/CustomHelmet";
 import Project from "src/components/Project";
 import Section from "src/components/Section";
