@@ -1,4 +1,3 @@
-import { birthDate } from "../config";
 import rutgersImg from "../assets/education/rutgers.jpeg";
 import middlesexCollegeImg from "../assets/education/middlesex-college.jpg";
 
@@ -90,57 +89,45 @@ export const about = {
   details: [
     {
       id: 1,
-      text: ` I'm Daniel Yoo, a ${getAge()} years old programmer, from Tangier Morocco 🇲🇦. `,
+      text: `I'm Daniel Yoo, a passionate software engineer born in 
+      South Korea and currently living in New Jersey, USA.`,
       icon: "🧔🏻",
     },
     {
       id: 2,
-      text: " I got my bachelor's degree in Computer Engineering at 2021. ",
+      text: "I got my bachelor's degree in Computer Engineering at 2021.",
       icon: "🧑🏼‍🎓",
     },
     {
       id: 3,
-      text: `
-              I enjoy being challenged and engaging with projects that require me to work outside
-              my comfort zone and knowledge set, as continuing to learn new languages and 
-              development techniques.
-           `,
+      text: `The very first day I typed "Hello world" was at 2017 summer which got me into the whole new world.
+Soon as I saw "Hello world" printed on the screen, I knew that this is what I want to do for the rest of my life and
+decide to pursue my career in software engineering.`,
       icon: "🎯",
     },
     {
       id: 4,
-      text: " I'm fluent in many programming languages, especially in Js/Ts & Python. ",
+      text: `Before starting my computer science degree, I self-taught 
+      basics and intermediate computer science concepts. For the places I worked for part time,
+      I provided programs that were usable by the company and tried various programming tools.
+      Starting from Java Swing, HTML, CSS, JavaScript, and React. To build an entire
+      full stack application, I also picked up Node.js, MongoDB and built an entire 
+      infrastructure using AWS`,
       icon: "💻",
     },
     {
       id: 5,
-      text: `
-              My field of Interest are building new  Web Technologies and Products and also in 
-              areas related Mobile application and Natural Language Processing.
-           `,
+      text: `In the midst of desire to teach others free, I created my own Youtube Channel
+      which now has more than three thousand subscribers. 
+      These skills I learned while helping other companies and teaching others,
+      I taught from how to build a desktop application to building a full stack application.`,
       icon: "🔎",
     },
     {
       id: 6,
-      text: `
-              whenever possible, i also apply my passion for developing products with multiple 
-              different frameworks and technologies, like Django, React, Angular, Vite, Redux, Node.js ...
-           `,
+      text: `With this passion, I also teach students web development at thedreaminc which helps
+      students in countries who can't afford to learn how to code.`,
       icon: "💭",
     },
   ],
 };
-
-function getAge() {
-  const tempBirthDate = new Date(birthDate);
-  const tempToday = new Date();
-  let age = tempToday.getFullYear() - tempBirthDate.getFullYear();
-  const month = tempToday.getMonth() - tempBirthDate.getMonth();
-  if (
-    month < 0 ||
-    (month === 0 && tempToday.getDate() < tempBirthDate.getDate())
-  ) {
-    age--;
-  }
-  return age;
-}

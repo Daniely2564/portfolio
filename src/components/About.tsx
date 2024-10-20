@@ -1,5 +1,4 @@
 import { useState } from "react";
-// Mantine
 import { Prism } from "@mantine/prism";
 import { useMediaQuery } from "@mantine/hooks";
 import {
@@ -10,21 +9,13 @@ import {
   Title,
   useMantineTheme,
 } from "@mantine/core";
-//
 import github from "prism-react-renderer/themes/github";
 import vsDark from "prism-react-renderer/themes/vsDark";
-// Components
 import BoxWrapper from "./BoxWrapper";
-// _mock
 import { about } from "src/_mock/aboutme";
-// icons
 import { Code, CodeOff } from "tabler-icons-react";
 
-// ----------------------------------------------------------------------------
-
 const aboutMeCode = `import Saad from "@saad/core"
-
-// -----------------------------------------------------------------------------
 
 type Props = {
   name: string;
