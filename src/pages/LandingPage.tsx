@@ -3,7 +3,8 @@ import { useState } from "react";
 import { ActionIcon, createStyles } from "@mantine/core";
 import { useScrollIntoView } from "@mantine/hooks";
 // components
-import About from "src/components/Experience";
+import Experience from "src/components/Experience";
+import About from "src/components/About";
 import Github from "src/components/Github";
 import Hero from "src/components/Hero";
 import Section from "src/components/Section";
@@ -51,7 +52,7 @@ export default function LandingPage() {
         <Hero />
       </Section>
       <Section withBackground={true}>
-        <About />
+        <Experience />
       </Section>
       <Section withBackground={false}>
         <Skills />

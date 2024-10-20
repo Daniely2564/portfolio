@@ -1,4 +1,3 @@
-// Mantine
 import {
   ActionIcon,
   Container,
@@ -6,8 +5,6 @@ import {
   Group,
   Text,
 } from "@mantine/core";
-//  Icons
-// hooks
 import useAnalyticsEventTracker from "../hooks/useAnalyticsEventTracker";
 import { socialLinks } from "../_mock/links";
 
@@ -68,9 +65,9 @@ export default function Footer() {
     <footer className={classes.footer}>
       <Container className={classes.afterFooter}>
         <Text color="dimmed" size="sm">
-          Copyright © 2022 na0495 All rights reserved, view the source code on{" "}
+          View the source code on{" "}
           <a
-            href="https://github.com/na0495/Personal-Portfolio-template"
+            href="https://github.com/Daniely2564/portfolio"
             target="_blank"
             rel="noreferrer"
           >

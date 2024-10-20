@@ -1,4 +1,5 @@
-// ----------------------------------------------
+import rutgersImg from "../assets/education/rutgers.jpeg";
+import middlesexCollegeImg from "../assets/education/middlesex-college.jpg";
 
 interface AboutMe {
   title: string;
@@ -50,6 +51,34 @@ to keep engineers informed. Built using Typescript and automated using Github Ac
         `Duplicated a commercially‑ready version of the LMS, customizing it for a third‑party organization and selling the software to such third‑party for
 $10,000.`,
         `Integrated a detailed analysis reporting system that identifies individualized areas of improvement using data from their previous tests.`,
+      ],
+    },
+  ],
+};
+
+export const education = {
+  title: "Education",
+  schools: [
+    {
+      name: "Rutgers University - New Brunswick",
+      duration: "Sept. 2019 - May. 2021",
+      gpa: "3.7/4",
+      degree: "B.S. in Computer Science",
+      img: rutgersImg,
+      items: [
+        "Dean’s List for the 2020 Spring Semester",
+        "Dean’s List for the 2020 Fall Semester",
+      ],
+    },
+    {
+      name: "Middlesex County College",
+      duration: "Sept. 2017 ‑ May. 2019",
+      gpa: "3.6/4",
+      degree: "A.S. in Computer Science",
+      img: middlesexCollegeImg,
+      items: [
+        "Dean’s List for the 2017 Fall Semester",
+        "Dean’s List for the 2018 Fall Semester",
       ],
     },
   ],
