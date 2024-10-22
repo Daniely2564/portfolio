@@ -23,32 +23,32 @@ export default function Routes() {
 
   return useRoutes([
     {
-      path: "/",
+      path: "/portfolio/",
       element: <MainLayout />,
       children: [{ path: "", element: <LandingPage /> }],
     },
     {
-      path: "/about",
+      path: "/portfolio/about",
       element: <MainLayout />,
       children: [{ path: "", element: <AboutPage /> }],
     },
     {
-      path: "/experience",
+      path: "/portfolio/experience",
       element: <MainLayout />,
       children: [{ path: "", element: <ExperiencePage /> }],
     },
     {
-      path: "/skills",
+      path: "/portfolio/skills",
       element: <MainLayout />,
       children: [{ path: "", element: <SkillsPage /> }],
     },
     {
-      path: "/education",
+      path: "/portfolio/education",
       element: <MainLayout />,
       children: [{ path: "", element: <EducationPage /> }],
     },
     {
-      path: "/contact",
+      path: "/portfolio/contact",
       element: <MainLayout />,
       children: [{ path: "", element: <ContactPage /> }],
     },
