@@ -17,17 +17,17 @@ const links = [
     label: "About",
     link: "/about",
   },
-  // {
-  //   label: "Path",
-  //   link: "/path",
-  // },
+  {
+    label: "Experience",
+    link: "/experience",
+  },
   {
     label: "Skills",
     link: "/skills",
   },
   {
-    label: "Projects",
-    link: "/projects",
+    label: "Education",
+    link: "/education",
   },
   {
     label: "Contact",

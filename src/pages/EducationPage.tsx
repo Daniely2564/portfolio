@@ -1,7 +1,6 @@
 // components
-import Github from "src/components/Education";
+import Education from "src/components/Education";
 import CustomHelmet from "src/components/CustomHelmet";
-import Project from "src/components/Project";
 import Section from "src/components/Section";
 
 // -------------------------------------------------
@@ -9,12 +8,9 @@ import Section from "src/components/Section";
 export default function ProjectsPage() {
   return (
     <>
-      <CustomHelmet title="Projects" />
+      <CustomHelmet title="Education" />
       <Section>
-        <Github />
-      </Section>
-      <Section>
-        <Project />
+        <Education />
       </Section>
     </>
   );

@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  createStyles,
-  ThemeIcon,
-  Text,
-  Group,
-  SimpleGrid,
-  Box,
-  Stack,
-} from "@mantine/core";
+import { createStyles, ThemeIcon, Text, Box, Stack } from "@mantine/core";
 import { Sun, Phone, MapPin, At, BrandGithub } from "tabler-icons-react";
 
 type ContactIconVariant = "white" | "gradient";
@@ -89,10 +81,10 @@ interface ContactIconsListProps {
 }
 
 const MOCKDATA = [
-  { title: "Email", description: "saadmrabet007@gmail.com", icon: At },
-  { title: "Github", description: "na0495", icon: BrandGithub },
-  { title: "Address", description: "Casablanca, Morocco", icon: MapPin },
-  { title: "Working hours", description: "8 a.m. – 11 p.m.", icon: Sun },
+  { title: "Email", description: "danielyoo132@gmail.com", icon: At },
+  { title: "Github", description: "daniel2564", icon: BrandGithub },
+  { title: "Address", description: "New Jersey, USA", icon: MapPin },
+  { title: "Working hours", description: "9 a.m. – 5 p.m.", icon: Sun },
 ];
 
 export function ContactIconsList({
@@ -104,31 +96,3 @@ export function ContactIconsList({
   ));
   return <Stack>{items}</Stack>;
 }
-
-// export function ContactIcons() {
-//   return (
-//     <SimpleGrid cols={2} breakpoints={[{ maxWidth: 800, cols: 1 }]}>
-//       {/* <Box
-//         sx={(theme) => ({
-//           padding: theme.spacing.xl,
-//           borderRadius: theme.radius.md,
-//           backgroundColor: theme.white,
-//         })}
-//       >
-//         <ContactIconsList />
-//       </Box> */}
-
-//       {/* <Box
-//         sx={(theme) => ({
-//           padding: theme.spacing.xl,
-//           borderRadius: theme.radius.md,
-//           backgroundImage: `linear-gradient(135deg, ${
-//             theme.colors[theme.primaryColor][6]
-//           } 0%, ${theme.colors[theme.primaryColor][4]} 100%)`,
-//         })}
-//       >
-//         <ContactIconsList />
-//       </Box> */}
-//     </SimpleGrid>
-//   );
-// }

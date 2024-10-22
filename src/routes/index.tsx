@@ -30,6 +30,11 @@ export default function Routes() {
     {
       path: "/about",
       element: <MainLayout />,
+      children: [{ path: "", element: <AboutPage /> }],
+    },
+    {
+      path: "/experience",
+      element: <MainLayout />,
       children: [{ path: "", element: <ExperiencePage /> }],
     },
     {
@@ -38,24 +43,14 @@ export default function Routes() {
       children: [{ path: "", element: <SkillsPage /> }],
     },
     {
-      path: "/projects",
+      path: "/education",
       element: <MainLayout />,
-      children: [{ path: "", element: <ProjectsPage /> }],
+      children: [{ path: "", element: <EducationPage /> }],
     },
     {
       path: "/contact",
       element: <MainLayout />,
       children: [{ path: "", element: <ContactPage /> }],
-    },
-    {
-      path: "/path",
-      element: <MainLayout />,
-      children: [{ path: "", element: <PathPage /> }],
-    },
-    {
-      path: "/game",
-      element: <MainLayout />,
-      children: [{ path: "", element: <Game /> }],
     },
     // Main Routes
     {
@@ -81,8 +76,6 @@ const NotFound = Loadable(lazy(() => import("src/pages/Page404")));
 const LandingPage = Loadable(lazy(() => import("src/pages/LandingPage")));
 const ExperiencePage = Loadable(lazy(() => import("src/pages/ExperiencePage")));
 const SkillsPage = Loadable(lazy(() => import("src/pages/SkillsPage")));
-const ProjectsPage = Loadable(lazy(() => import("src/pages/ProjectsPage")));
+const EducationPage = Loadable(lazy(() => import("src/pages/EducationPage")));
+const AboutPage = Loadable(lazy(() => import("src/pages/AboutPage")));
 const ContactPage = Loadable(lazy(() => import("src/pages/ContactPage")));
-const HomePage = Loadable(lazy(() => import("src/pages/HomePage")));
-const PathPage = Loadable(lazy(() => import("src/pages/PathPage")));
-const Game = Loadable(lazy(() => import("src/components/Game")));

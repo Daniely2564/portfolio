@@ -15,7 +15,7 @@ import BoxWrapper from "./BoxWrapper";
 import { about } from "src/_mock/aboutme";
 import { Code, CodeOff } from "tabler-icons-react";
 
-const aboutMeCode = `import Saad from "@saad/core"
+const aboutMeCode = `import Daniel from "@daniel/core"
 
 type Props = {
   name: string;
@@ -26,10 +26,10 @@ type Props = {
 
 export default function AboutMe(props: Props) {
   return (
-    <Saad ${about.details.map(
+    <Daniel ${about.details.map(
       (item: any) =>
         `
-      ${item.icon} = {${item.text}}`
+      ${item.icon} = {\`${item.text}\`}`
     )}
     />
   );

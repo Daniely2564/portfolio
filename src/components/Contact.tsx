@@ -9,18 +9,10 @@ import {
   TextInput,
   Title,
 } from "@mantine/core";
-import { useForm } from "@mantine/form";
-import { showNotification } from "@mantine/notifications";
 // components
 import BoxWrapper from "./BoxWrapper";
 import { ContactIconsList } from "./ContactIcons";
-// utils
-import emailjs from "emailjs-com";
-import { Check } from "tabler-icons-react";
-// config
-import { serviceId, templateId, userId } from "../config";
-
-// -----------------------------------------------------------
+import { FormEventHandler } from "react";
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -85,38 +77,9 @@ const useStyles = createStyles((theme) => ({
 export function Contact() {
   const { classes } = useStyles();
 
-  const form = useForm({
-    initialValues: {
-      email: "",
-      name: "",
-      message: "",
-    },
-
-    validate: {
-      email: (value) => (/^\S+@\S+$/.test(value) ? null : "Invalid email"),
-      name: (value) => (value.length > 0 ? null : "Name is required"),
-      message: (value) => (value.length > 0 ? null : "Message is required"),
-    },
-  });
-
-  const onSubmit = (values: any) => {
-    try {
-      emailjs.send(serviceId, templateId, values, userId).then((result) => {
-        showNotification({
-          title: "Success",
-          message: "Your message has been sent, ! ! 🤩",
-          color: "green",
-          icon: <Check />,
-        });
-        form.reset();
-      });
-    } catch (error) {
-      showNotification({
-        title: "Error",
-        message: "An error occurred while sending your message",
-        color: "red",
-      });
-    }
+  const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault();
+    alert("Not implemented");
   };
 
   return (
@@ -134,24 +97,14 @@ export function Contact() {
 
           <ContactIconsList />
         </div>
-        <form onSubmit={form.onSubmit(onSubmit)} className={classes.form}>
-          <TextInput
-            label="Email"
-            placeholder="your@email.com"
-            {...form.getInputProps("email")}
-          />
-          <TextInput
-            label="Name"
-            placeholder="John Doe"
-            mt="md"
-            {...form.getInputProps("name")}
-          />
+        <form onSubmit={onSubmit} className={classes.form}>
+          <TextInput label="Email" placeholder="your@email.com" />
+          <TextInput label="Name" placeholder="John Doe" mt="md" />
           <Textarea
             label="Your message"
             placeholder="I want to order your goods"
             minRows={4}
             mt="md"
-            {...form.getInputProps("message")}
           />
 
           <Group position="right" mt="md">

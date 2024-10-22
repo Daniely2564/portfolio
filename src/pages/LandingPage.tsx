@@ -9,7 +9,6 @@ import Education from "src/components/Education";
 import Hero from "src/components/Hero";
 import Section from "src/components/Section";
 import Skills from "src/components/Skills";
-import Project from "src/components/Project";
 // // icons
 import { ArrowUp } from "tabler-icons-react";
 
@@ -48,13 +47,11 @@ export default function LandingPage() {
   return (
     <>
       <div ref={targetRef} />
-      {[Hero, About, Experience, Skills, Education, Project].map(
-        (Component, idx) => (
-          <Section key={idx} isFirst={idx === 0} withBackground={idx % 2 === 1}>
-            <Component />
-          </Section>
-        )
-      )}
+      {[Hero, About, Experience, Skills, Education].map((Component, idx) => (
+        <Section key={idx} isFirst={idx === 0} withBackground={idx % 2 === 1}>
+          <Component />
+        </Section>
+      ))}
       <div className={classes.sticky}>
         <ActionIcon
           variant="filled"
