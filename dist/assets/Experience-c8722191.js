@@ -1,4 +1,4 @@
-import{n as h,m as g,r as u,j as e,s as j,G as l,T as f}from"./index-948ea112.js";import{S as b,C as y,a as w,P as T,v as k,g as C}from"./index-07e630b8.js";import{B as v,T as x}from"./BoxWrapper-db1868a7.js";import{e as i}from"./aboutme-647b3101.js";import{L as p}from"./List-77aa0b46.js";const E=`import Daniel from "@daniel/experiences"
+import{n as h,m as g,r as u,j as e,s as j,G as l,T as f}from"./index-9cf077ad.js";import{S as b,C as y,a as w,P as T,v as k,g as C}from"./index-e3b1a8a0.js";import{B as v,T as x}from"./BoxWrapper-38604d70.js";import{e as i}from"./aboutme-243aa16f.js";import{L as p}from"./List-c181fd45.js";const E=`import Daniel from "@daniel/experiences"
 
 // -----------------------------------------------------------------------------
 
