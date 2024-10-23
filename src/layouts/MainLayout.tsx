@@ -5,33 +5,34 @@ import { AppShell, useMantineTheme } from "@mantine/core";
 // header
 import Footer from "src/components/Footer";
 import HeaderResponsive from "./header/HeaderResponsive";
+import { DEFAULT_BASE_URL } from "src/config";
 
 //-----------------------------------------------------------------------------
 
 const links = [
   {
     label: "Landing",
-    link: "/",
+    link: DEFAULT_BASE_URL + "/",
   },
   {
     label: "About",
-    link: "/about",
+    link: DEFAULT_BASE_URL + "/about",
   },
   {
     label: "Experience",
-    link: "/experience",
+    link: DEFAULT_BASE_URL + "/experience",
   },
   {
     label: "Skills",
-    link: "/skills",
+    link: DEFAULT_BASE_URL + "/skills",
   },
   {
     label: "Education",
-    link: "/education",
+    link: DEFAULT_BASE_URL + "/education",
   },
   {
     label: "Contact",
-    link: "/contact",
+    link: DEFAULT_BASE_URL + "/contact",
   },
 ];
 

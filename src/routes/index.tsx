@@ -5,6 +5,7 @@ import { Navigate, useRoutes } from "react-router-dom";
 import MainLayout from "src/layouts/MainLayout";
 // components
 import FallbackLoader from "src/components/animations/FallbackLoader";
+import { DEFAULT_BASE_URL } from "src/config";
 
 // ----------------------------------------------------------------------
 
@@ -23,32 +24,32 @@ export default function Routes() {
 
   return useRoutes([
     {
-      path: "/portfolio/",
+      path: DEFAULT_BASE_URL + "/",
       element: <MainLayout />,
       children: [{ path: "", element: <LandingPage /> }],
     },
     {
-      path: "/portfolio/about",
+      path: DEFAULT_BASE_URL + "/about",
       element: <MainLayout />,
       children: [{ path: "", element: <AboutPage /> }],
     },
     {
-      path: "/portfolio/experience",
+      path: DEFAULT_BASE_URL + "/experience",
       element: <MainLayout />,
       children: [{ path: "", element: <ExperiencePage /> }],
     },
     {
-      path: "/portfolio/skills",
+      path: DEFAULT_BASE_URL + "/skills",
       element: <MainLayout />,
       children: [{ path: "", element: <SkillsPage /> }],
     },
     {
-      path: "/portfolio/education",
+      path: DEFAULT_BASE_URL + "/education",
       element: <MainLayout />,
       children: [{ path: "", element: <EducationPage /> }],
     },
     {
-      path: "/portfolio/contact",
+      path: DEFAULT_BASE_URL + "/contact",
       element: <MainLayout />,
       children: [{ path: "", element: <ContactPage /> }],
     },
