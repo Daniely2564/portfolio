@@ -1,4 +1,4 @@
-import{n as c,m as x,r as d,j as e,s as h,G as m,T as p}from"./index-9cf077ad.js";import{S as u,C as g,a as j,P as f,v as b,g as T}from"./index-e3b1a8a0.js";import{B as C,T as k}from"./BoxWrapper-38604d70.js";import{b as a}from"./aboutme-243aa16f.js";const w=`import Daniel from "@daniel/core"
+import{n as c,m as x,r as d,j as e,s as h,G as m,T as p}from"./index-c9015bdd.js";import{S as u,C as g,a as j,P as f,v as b,g as T}from"./index-88c90f3d.js";import{B as C,T as k}from"./BoxWrapper-e297236c.js";import{b as a}from"./aboutme-d22598ae.js";const w=`import Daniel from "@daniel/core"
 
 type Props = {
   name: string;
